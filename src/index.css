@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IntellMeet design system - Bright productivity, Slack/Asana inspired */
+
+@layer base {
+  :root {
+    --background: 210 25% 98%;
+    --foreground: 222 35% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 35% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 35% 12%;
+
+    /* Vibrant indigo-violet brand */
+    --primary: 252 87% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 90% 70%;
+
+    /* Soft surface */
+    --secondary: 220 30% 96%;
+    --secondary-foreground: 222 35% 12%;
+
+    --muted: 220 25% 95%;
+    --muted-foreground: 220 12% 45%;
+
+    /* Accent: punchy coral for AI / highlights */
+    --accent: 16 95% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 152 70% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 95% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 78% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 252 87% 60%;
+
+    --radius: 0.85rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(252 87% 60%), hsl(282 88% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(16 95% 60%), hsl(338 88% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(252 87% 60%) 0%, hsl(282 88% 65%) 50%, hsl(338 88% 65%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(220 100% 99%) 0%, hsl(252 60% 97%) 100%);
+
+    --shadow-sm: 0 1px 2px hsl(222 35% 12% / 0.04);
+    --shadow-md: 0 4px 16px hsl(222 35% 12% / 0.06);
+    --shadow-lg: 0 12px 32px hsl(252 87% 60% / 0.12);
+    --shadow-glow: 0 8px 32px hsl(252 87% 60% / 0.25);
+
+    --sidebar-background: 222 40% 10%;
+    --sidebar-foreground: 220 15% 80%;
+    --sidebar-primary: 252 87% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 35% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 252 87% 60%;
+  }
+
+  .dark {
+    --background: 222 40% 8%;
+    --foreground: 210 30% 96%;
+    --card: 222 35% 11%;
+    --card-foreground: 210 30% 96%;
+    --popover: 222 35% 11%;
+    --popover-foreground: 210 30% 96%;
+    --primary: 252 87% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 30% 15%;
+    --secondary-foreground: 210 30% 96%;
+    --muted: 222 30% 15%;
+    --muted-foreground: 220 12% 65%;
+    --accent: 16 95% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 78% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 252 87% 65%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html, body { font-family: 'Inter', system-ui, sans-serif; }
+  body { @apply bg-background text-foreground antialiased; }
+  h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; @apply tracking-tight; }
+}
+
+@layer utilities {
+  .bg-gradient-primary { background: var(--gradient-primary); }
+  .bg-gradient-accent { background: var(--gradient-accent); }
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-soft { background: var(--gradient-soft); }
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .shadow-soft { box-shadow: var(--shadow-md); }
+  .shadow-elevated { box-shadow: var(--shadow-lg); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .glass {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

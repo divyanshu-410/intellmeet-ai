@@ -1,0 +1,7 @@
+project_id = "mrspgvxeidvtxlirlmvk"
+
+[functions.scribe-token]
+verify_jwt = true
+
+[functions.summarize-meeting]
+verify_jwt = true
